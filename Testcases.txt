@@ -1,0 +1,100 @@
+TC No.  	                Preconditions 	                                 Scenario Name  Description 	                 Action 	                                                        Test data 	                         Expected Result 
+                                                                                                                                             
+                                                                                                                                        Requirements for ABTS login screen
+						
+Tc 01	leave tracking page should be visible	                       apply for leave		  1.select the issue from dropdownlist                	   valid date format	         submission successful
+				                                                                                  2.date should be entered in given format	   Issue selected	
+				                                                                                  3.enter reason		
+				                                                                                  4.click submit button		
+						
+Tc 02       leave tracking page should be visible	                       apply for leave		 1.select the issue from dropdownlist	                   Inavlid date format	        submission failed
+				                                                                                 2.date should be entered in given format	   Issue selected	                        Error occur
+				                                                                                 3.enter reason		
+				                                                                                 4.click submit button		
+
+Tc 03      leave tracking page should be visible	                       apply for leave		1.select the issue from dropdownlist	                     valid date format	         submission failed
+				                                                                                2.date should be entered in given format	   Issue is not selected	         Error occur
+				                                                                                3.enter reason		
+				                                                                                4.click submit button		
+						
+Tc 04	leave tracking page should be visible	                       apply for leave		1.select the issue from dropdownlist	                    valid date format	All the details are enterd correctly
+				                                                                                2.date should be entered in given format	     Issue selected	
+				                                                                                3.enter reason		
+				                                                                                4.click viewsheet button		
+						
+						
+                                                                                                                                 
+                                                                                                                                     Requirements for issue registration in HR connect
+						
+Tc 01	HR connect page should be visible	                  Hr issue registration	1.System should fetch Employeename,Id and mail	Mandatory fields are entered correctly	issue send successfully
+				                                                                                2.location can be selected from the dropdown list		
+				                                                                                3. user can enter the extension of number of maximum length 4 		
+				                                                                                4.issue catogory, sub-catogory, seviority level selected from drop down list. 		
+				                                                                                5.write issue		
+				                                                                                6.click send button		
+						
+Tc 02	HR connect page should be visible	                  Hr issue registration            1.System should fetch Employeename,Id and mail	Extension number exceed the maximum length	  Issue unsuccesful
+				                                                                               2.location can be selected from the dropdown list		                                                                  Error occur
+				                                                                               3. user can enter the extension of number  maximum length 4 		
+				                                                                               4.issue catogory, sub-catogory, seviority level selected from drop down list. 		
+				                                                                               5.write issue		
+				                                                                               6.click send button		
+						
+Tc 03	HR connect page should be visible	                  Hr issue registration           1.System should fetch Employeename,Id and mail	Issue is not selected	                                  Issue unsuccesful
+				                                                                              2.location can be selected from the dropdown list		                                                                  Error occur
+				                                                                              3. user can enter the extension of number  maximum length 4 		
+				                                                                              4.issue catogory, sub-catogory, seviority level selected from drop down list. 		
+				                                                                              5.write issue		
+				                                                                              6.click send button		
+						
+Tc 04 	hR connect page should be visible	                 Hr issue registration           1.System should fetch Employeename,Id and mail	some fields are missed	                                    Issue unsuccesful
+				                                                                             2.location can be selected from the dropdown list		                                                                    Error occur
+				                                                                             3. enter the extensionnumber		
+				                                                                             4. Select issue catogory, sub-catogory, seviority level from drop down list. 		
+				                                                                             5.write issue		
+				                                                                             6.click send button		
+						
+						
+                                                                                                      
+                                                                                                                                                 Requirements for request in MRBS						
+Tc 01	MRBS page should be available	        Request form		            1.Enter project	                     All fields are entered succesfully	                              submit successfully
+				                                                                            2.Enter extension number		
+				                                                                            3.Enter purpose		
+				                                                                            4.select facilities		
+				                                                                            5.click submit button		
+						
+Tc 02	MRBS page should be available	        Request form		           1.Enter project	                    purpose exceed maximum length	                               submission failed
+				                                                                           2.Enter extension number		                                                                                Error occur
+				                                                                           3.Enter purpose		
+				                                                                           4.select facilities		
+				                                                                           5.click submit button		
+						
+Tc 03	MRBS page should be available	        Request form		          1.Enter project	                      Facilities are not selected	                               submission failed
+				                                                                          2.Enter extension number		                                                                                Error occur
+				                                                                          3.Enter purpose		
+				                                                                          4.select facilities		
+				                                                                          5.click submit button		
+						
+Tc 04	MRBS page should be available	         Request form		          1.Enter project	                         Reset successful	                                              cleared successfully
+				                                                                          2.Enter extension number		
+				                                                                          3.Enter purpose		
+				                                                                          4.select facilities		
+				                                                                          5.click cancel button		
+						
+						
+
+                                                                                                                                     Computing area of a triangle						
+Tc 01	Calculate area of triangle	                  Area of triangle		        1.Enter side lengths a,b,c	             all conditions are satisfied 	                               Triangle is formed
+				                                                                        2.calculate the perimeter of triangle		
+				                                                                        3.calculate area of triangle		
+				                                                                        4.check conditions		
+						
+Tc 02	Calculate area of triangle	                 Area of triangle		        1.Enter side lengths a,b,c	              One side is negative   	                              Triangle is not formed
+				                                                                        2.calculate the perimeter of triangle		
+				                                                                        3.calculate area of triangle		
+				                                                                        4.check conditions		
+						
+Tc 03	Calculate area of triangle	               Area of triangle		        1.Enter side lengths a,b,c	       sum of two sides are smaller than third side	Triangle is not formed
+				                                                                        2.calculate the perimeter of triangle		
+				                                                                        3.calculate area of triangle		
+				                                                                        4.check conditions		
