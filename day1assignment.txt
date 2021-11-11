@@ -1,0 +1,236 @@
+1
+package com.sonata1;
+
+public class greatestnumber {
+
+	public static void main(String[] args) {
+		int a=12, b=25, c=89;
+		if(a>=b && a>=c)
+			System.out.println(a+"is the greatest number");
+		else if(b>=a && b>=c)
+			System.out.println(b+"is the greatest number");
+		else
+			System.out.println(c+"is the greatest number");
+
+	}
+
+}
+
+
+2
+package com.sonata1;
+
+public class naturalnumbers {
+
+	public static void main(String[] args) {
+		int i;
+		System.out.println("the first 10 natural numbers are:");
+		for(i=1;i<=10;i++)
+		{
+			System.out.println(i);
+		}
+		System.out.println("\n");
+
+	}
+
+}
+
+
+3
+package com.sonata1;
+
+import java.util.Scanner;
+
+public class cubeofthenumber {
+
+	public static void main(String[] args) {
+		System.out.println("enter a number:");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		System.out.println("Cube of the given number is "+(num*num*num));
+
+	}
+
+}
+
+
+4
+package com.sonata1;
+
+public class sumofarrval {
+
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5,6};
+		int sum=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			sum=sum+arr[i];
+		}
+		System.out.println("sum of all the elements of an array:"+sum);
+
+	}
+
+}
+
+
+
+5
+package com.sonata1;
+
+import java.util.Scanner;
+
+public class specificval {
+
+	public static void main(String[] args) {
+		int arr[]= {12,45,54,78,36};
+		System.out.println("enter the number:");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		for(int i=0;i<arr.length;i++)
+		{
+			if(num==arr[i])
+			{
+				System.out.println("array contains given element");
+			}
+			
+		}
+
+	}
+
+}
+
+
+
+6
+package com.sonata1;
+
+public class arrrev {
+
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5};
+		System.out.println("original array");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]+" ");
+		}
+		System.out.println("array in reverse order");
+		for(int i=arr.length-1;i>=0;i--)
+		{
+			System.out.println(arr[i]+" ");
+		}
+
+	}
+
+}
+
+
+
+7
+package com.sonata1;
+
+import java.util.Scanner;
+
+public class replacevow {
+
+	public static void main(String[] args) {
+		System.out.println("enter the string");
+		Scanner sc=new Scanner(System.in);
+		String st=sc.nextLine();
+		char ch[]=st.toCharArray();
+		for(int i=0;i<ch.length;i++)
+		{
+			if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u')
+			{
+				ch[i]='$';
+			}
+		}
+		for(int i=0;i<ch.length;i++)
+		{
+			System.out.println(ch[i]);
+		}
+
+	}
+
+}
+
+
+
+8
+package com.sonata1;
+
+public class duplval {
+
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5,4,3};
+		System.out.println("duplicate values");
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+					System.out.println(arr[i]);
+			}
+		}
+
+	}
+
+}
+
+
+
+
+9
+package com.sonata1;
+
+public class countofdupl {
+
+	public static void main(String[] args) {
+		int count=0;
+		int arr[]= {1,2,3,4,5,4,2};
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					count++;
+					break;
+				}
+			}
+		}
+		System.out.println("the count of duplicate number is"+count);
+	
+
+	}
+
+}
+
+
+
+
+10
+package com.sonata1;
+
+public class twolarnum {
+
+	public static void main(String[] args) {
+		int arr[]= {6,7,45,58,47,23};
+		int largeNum1=0;
+		int largeNum2=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(largeNum1<arr[i])
+			{
+				largeNum2=largeNum1;
+				largeNum1=arr[i];
+			}
+			else if(largeNum2<arr[i])
+			{
+				largeNum2=arr[i];
+			}
+		}
+		System.out.println("two large numbers"+largeNum1+" "+largeNum2);
+
+	}
+
+}
