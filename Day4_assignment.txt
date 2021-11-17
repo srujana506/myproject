@@ -1,0 +1,118 @@
+1)Create Employee class with below attributes and override the toString() method to display the employee data:-
+a.Employee ID
+b.Employee Name
+c.Employee Salary
+Create an interface EmployeeInt with following methods:
+
+public void addEmployee(Employee e);
+public void deleteEmployee(Employee e);
+opublic double yearSalary(Employee e1);
+opublic double appSalary(Employee e1)
+
+              Implement the interface in EmployeeImpl class. 
+
+Write a UserEmployee class which creates few instance of Employee class in main method and add the Employees in an List and display them using above methods.
+a)Check for the duplication of employee ID with comparable method. If found handle DuplicateEmpoyeeID Exception
+b)Increase the employee salary by 5000 if the Employee Salary is less than 10,000
+c)Calculate the yearly salary for given employee.
+
+.package com.sonata;
+import java.util.*;
+
+public class Employee {
+	int EmpId;
+	String EmpName;
+	double EmpSal;
+	public Employee(int EmpId,String EmpName,double EmpSal) {
+		this.EmpId=EmpId;
+		this.EmpName=EmpName;
+		this.EmpSal=EmpSal;
+	}
+	public String toString() {
+		return EmpId+" "+EmpName+" "+EmpSal;
+	}
+
+}
+.package com.sonata;
+
+import java.util.*;
+
+public class EmployeeImpl implements EmployeeInt{
+	
+
+	@Override
+	public void addEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double yearSalary(Employee e1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double appSalary(Employee e1) {
+		// TODO Auto-generated method stub
+		if(e1.EmpSal<10000)
+			e1.EmpSal=e1.EmpSal+5000;
+		return e1.EmpSal;
+	}
+
+	@Override
+	public List<Employee> getEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+
+}
+.package com.sonata;
+import java.util.*;
+
+public interface EmployeeInt {
+	public void addEmployee(Employee e);
+
+	public void deleteEmployee(Employee e); 
+
+	public double yearSalary(Employee e1); 
+
+	public double appSalary(Employee e1);
+	public List <Employee>getEmployee ();
+
+}
+.package com.sonata;
+import java.util.*;
+
+public class UserEmployee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e3 = new Employee(12,"srujana",1234);
+		Employee e4 = new Employee(23,"deepu",3356);
+		Employee e5 = new Employee(45,"janu",5678);
+		UserEmployee ue = new UserEmployee();
+		System.out.println(e3);
+		System.out.println(e4);
+		System.out.println(e5);
+		ue.appSalary(e3);
+
+	}
+
+}
+
+
+
+
+
+
+

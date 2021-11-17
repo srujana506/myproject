@@ -1,0 +1,275 @@
+1)Create a Employee class with below properties and methods
+empId, empName,empSal and public void display(){} , 
+public void salCal(){} implement the inheritance & polymorphism functionality for Manager ,Developer, Tester class override the SalCal function.
+
+.package com.sonata;
+
+public class Developer extends Employee{
+	public void salcal(double sal) {
+		super.empSal=sal+578;
+	}
+
+}
+.package com.sonata;
+
+public class Employee {
+	int empId;
+	String empName;
+	double empSal;
+	public void salcal(double sal) {
+		this.empSal=sal;
+	}
+	public void display() {
+		System.out.println(empId);
+		System.out.println(empName);
+		System.out.println(empSal);
+		}
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		e1.empId=123;
+		e1.empName="parvathi";
+		e1.salcal(1000);
+		e1.display();
+		Manager m1 = new Manager();
+		m1.empId=456;
+		m1.empName="jhansi";
+		m1.salcal(2000);
+		m1.display();
+		Tester t1 = new Tester();
+		t1.empId=678;
+		t1.empName="preeti";
+		t1.salcal(3000);
+		t1.display();
+		Developer d1 = new Developer();
+		d1.empId=890;
+		d1.empName="agj";
+		d1.salcal(4000);
+		d1.display();
+	}
+
+}
+.package com.sonata;
+
+public class Manager extends Employee{
+	public void salcal(double sal) {
+		super.empSal=sal+10000;
+	}
+
+}
+.package com.sonata;
+
+public class Tester extends Employee{
+	public void salcal(double sal) {
+		super.empSal=sal+1300;
+	}
+
+}
+2)Create a Shape class to draw a diagram like rectangle, square, triangle , with same properties like length , height, width and calculate the area  of it by overriding the method in respective class 
+
+.package com.sonata1;
+
+public class Rectangle extends Shape{
+	public void area() {
+		super.a=super.length*super.width;
+		System.out.println("the area of rectangle is "+a);
+	}
+
+}
+.package com.sonata1;
+
+public class Shape {
+	double length;
+	double height;
+	double width;
+	double a;
+	public void area() {}
+	public void display() {
+		System.out.println("length="+length);
+		System.out.println("height="+height);
+		System.out.println("width="+width);
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rectangle r1 = new Rectangle();
+		r1.length=3;
+		r1.height=5;
+		r1.width=6;
+		System.out.println("length,height and width of a rectangle are");
+		r1.display();
+		r1.area();
+		Traingle t1 = new Traingle();
+		t1.length=4;
+		t1.height=4;
+		t1.width=5;
+		System.out.println("length,height and width of a Traingle are");
+		t1.display();
+		t1.area();
+		Square s1 = new Square();
+		s1.length=3;
+		s1.height=3;
+		s1.width=3;
+		System.out.println("length,height and width of a square are");
+		s1.display();
+		s1.area();
+
+	}
+
+}
+.package com.sonata1;
+
+public class Square extends Shape{
+	public void area() {
+		super.a=length*length;
+		System.out.println("the area of square is "+a);
+	}
+
+}
+.package com.sonata1;
+
+public class Traingle extends Shape{
+	public void area() {
+		super.a=0.5*super.height*super.length;
+	    System.out.println("the area of traingle is "+a);
+	}
+
+}
+3)Create a custom exceptions to handle when the yearly salary of an employee is less than 
+1,00,000.
+
+.package com.sonata2;
+
+public class EmployeeSalary {
+
+	public static void main(String[] args) throws SalaryException{
+		// TODO Auto-generated method stub
+		int sal=50000;
+		if(sal<100000)
+			throw new SalaryException("yearly salary of an employee is less than 100000");
+		else
+			System.out.println("yearly salary of an employee is "+sal);
+
+	}
+
+}
+.package com.sonata2;
+
+public class SalaryException extends Exception{
+	public SalaryException(String s) {
+		super(s);
+	}
+
+}
+4)The abstract class Employee has two sub classes called TechnicalEmployee and Staff.
+An employee class has attributes as below:-
+a.Employee ID
+b.Employee Name
+c.Address
+d.Basic Pay
+e.No of leave available
+Address should be an instance of Address class with the attributes Door No, Street, City and Pin Code
+A Technical Employee member has technical skill (eg: c, c++, Java)
+A staff member has a title. (eg: House keeping,  security)
+Create all the classes as per the spec given above.
+//Create appropriate constructors. 
+Create an abstract method “calculateSalary” in the Employee class and override it in the sub classes using the below formula:-
+ salary = basic pay + HRA
+HRA should be calculated as per below rules
+a.Technical Employee -  12% of Basic Pay
+b.Staff  - 18% of Basic pay
+Override the toString() method in each class to display the Employee ID and Employee Name. 
+Write a UsingPeople class which creates a few instances of the classes in its main() method, and shows how they can be used.
+
+.package com.sonata3;
+
+public class Address {
+
+	String DNo;
+	String street;
+	String city;
+	String pincode;
+	public Address(String DNo,String street,String city,String pincode){
+		this.DNo=DNo;
+		this.street=street;
+		this.city=city;
+		this.pincode=pincode;
+
+	}
+	public void display() {
+		System.out.println("the address of an employee is ");
+		System.out.println("DNo:"+DNo+","+street+","+city+","+pincode+".");
+	
+	}
+	
+	
+
+}
+.package com.sonata3;
+
+public abstract class Employee {
+	int EmpId;
+	String EmpName;
+	double BPay=20000;
+    double noofleavAv;
+    double hra;
+    double sal;
+    public abstract void calculatesalary();
+    public String toString() {
+    	return "employye id is "+EmpId+" employee name is "+EmpName;
+    }
+    Address a1;
+
+}
+.package com.sonata3;
+
+public class Staff extends Employee{
+	public void calculatesalary() {
+		super.hra=0.18*super.BPay;
+		super.sal=super.sal+hra;
+		System.out.println("the salary for staff is "+sal);
+	}
+	public String toString() {
+		return "employye id="+EmpId+" ,employee name="+EmpName;
+    }
+    Address a1=new Address("123","kphb colony","hyderabad","527894");
+    
+
+}
+.package com.sonata3;
+
+public class TechnicalEmployee extends Employee{
+	public void calculatesalary() {
+		super.hra=0.12*super.BPay;
+		super.sal=super.sal+hra;
+		System.out.println("the salary for technicalemployee is "+sal);
+	}
+	public String toString() {
+		return "employye id="+EmpId+" ,employee name="+EmpName;
+    }
+    Address a1=new Address("123","balaji nagar","hyderabad","522007");
+    
+    
+
+}
+.package com.sonata3;
+
+public class UsingPeople {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TechnicalEmployee t1 = new TechnicalEmployee();
+		t1.EmpId=23;
+		t1.EmpName="parvathi";
+		System.out.println(t1.toString());
+		t1.a1.display();
+		t1.calculatesalary();
+		Staff s1 = new Staff();
+		s1.EmpId=45;
+		s1.EmpName="preeti";
+		System.out.println(s1.toString());
+		s1.a1.display();
+		s1.calculatesalary();
+
+	}
+
+}
+
