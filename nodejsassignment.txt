@@ -1,0 +1,96 @@
+1.Using the path, file module create a directory folder called a “Training Details”. Add a file to it. With Student name, read the data and display.
+
+const fs = require('fs');
+
+const path = require('path');
+
+//create folder with async call back function
+
+/*fs.mkdir(path.join(__dirname, '/studentdetails'), {}, function(err){
+
+    if(err)throw err;
+
+    console.log('');
+
+});*/
+
+/*fs.writeFile(path.join(__dirname, 'studentdetails','stude.txt'),
+
+'student name = srujana',
+
+(err)=>{
+
+    if(err)throw err;
+
+    console.log('File written to ...');
+
+ });*/
+
+/* fs.appendFile(path.join(__dirname, '/studentdetails','/stude.txt'),
+
+ 'my student Id is 20884',
+
+ err=>{
+
+     if(err) throw err;
+
+     console.log('File append to...')
+
+ });*/
+
+ fs.readFile(path.join(__dirname, '/studentdetails','/stude.txt'),'utf8',(err,data)=>{
+
+    if(err)throw err;
+
+    console.log(data);
+
+});
+
+
+2.Create a server with response Header with content type as text/html. Design a HTML page with UserName, Password as input fields, display when the request is made. 
+const name = 'event'
+
+3.Create an event to handle the logger message as “Welcome to NodeJS” with random UUID.
+
+const greeting = function(name) {
+
+    console.log(`Hello ${name}, welcome to NodeJS`)
+
+}
+
+
+4.Using file module try to read a java file and display the data.
+
+const fs = require('fs');
+
+const path = require('path');
+
+//create folder with async call back function
+
+/*fs.mkdir(path.join(__dirname, '/readfile'), {}, function(err){
+
+    if(err)throw err;
+
+    console.log('');
+
+});*/
+
+fs.writeFile(path.join(__dirname, '/readfile','/writefile.java'),
+
+'my text in my file',
+
+(err)=>{
+
+    if(err)throw err;
+
+    console.log('File written to ...');
+
+ });
+
+ fs.readFile(path.join(__dirname, '/readfile','/writefile.java'),'utf8',(err,data)=>{
+
+    if(err)throw err;
+
+    console.log(data);
+
+});
