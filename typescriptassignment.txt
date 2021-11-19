@@ -1,0 +1,188 @@
+1)Declare three number variables with value as 12,25,89 find the greatest number and display.
+
+const var1:number=12;
+const var2:number=25;
+const var3:number=89;
+let largest:number;
+if(var1 >= var2 && var1 >= var3) {
+largest = var1;
+}
+else if (var2 >= var1 && var2 >= var3) {
+largest = var2;
+}
+else {
+largest = var3;
+}
+
+console.log(`the largest number is:${largest}`);
+
+
+
+2)Define an array and check if it contains a specific value.
+
+const a:number[]=[1,2,3];
+
+for(let i=0;i<a.length;i++)
+{
+if(a[i]==3)
+    {
+       console.log("the value is found " +a[i]);
+    }
+}
+
+
+
+3)Write a program using Typescript to reverse an array of integer values 
+
+const arr:number[]=[1,2,3].reverse();
+console.log("reverse array is : " +arr);
+
+
+
+4)Create student class having stdID , stdName, stdClass and display the information of two objects
+
+export class Student{
+ stdid:number;
+ stdname:string;
+ stdclass:any;
+
+constructor(data?:any){
+this.stdid=data.stdid || 20884;
+this.stdname=data.stdname || 'Srujana';
+this.stdclass=data.stdclass || 'Btech';
+ }
+
+}
+import { Student } from './quesno4';
+const c:Student={stdid:456,stdname:'pranathi',stdclass:'firstclass'};
+console.log("the stdid is " +c.stdid+"  the stdname is " +c.stdname+"  the stdclass is " +c.stdclass);
+const c1:Student={stdid:789,stdname:'isha',stdclass:'8thclass'};
+console.log("the stdid is " +c1.stdid+"  the stdname is " +c1.stdname+"  the stdclass is " +c1.stdclass);
+const c2:Student={stdid:456,stdname:'adhya',stdclass:'10thclass'};
+console.log("the stdid is " +c2.stdid+"  the stdname is " +c2.stdname+"  the stdclass is " +c2.stdclass);
+
+
+
+5)Create a product class The properties are ProID, ProName, ProPrice ,add GST as additional tax for ProPrice display the data.
+
+export class Product{
+ proid:number;
+ proname:string;
+ proprice:number;
+/* gst:number;
+ totalprice:number;*/
+ constructor(data?:any){
+this.proid=data.proid || 4521;
+this.proname=data.proname || 'laptop';
+this.proprice=data.proprice || 50000;
+ }
+
+
+}
+
+import { Product } from './quesno5';
+let gst:number=200;
+let totalprice:number;
+const p:Product={proid:456,proname:'mobile',proprice:15000};
+console.log("the proid is " +p.proid+"  the proname is " +p.proname+"  the proprice is " +p.proprice);
+
+function Price()
+{
+  totalprice=p.proprice+gst;
+  console.log("the total price is :" +totalprice)
+}
+Price();
+
+
+
+6)Create a T-Shirt  class with the following fields.
+
+String color
+String material
+String design
+Create three instances of object based on different sizes like small, large ,  xtra-large.
+
+export class T_shirt{
+    color:string;
+    material:string;
+    design:string;
+    size:string;
+constructor(data?:any){
+this.color=data.color || 'black';
+this.material=data.material || 'cotton';
+this.design=data.proprice || 'polo';
+this.size=data.size || 's';
+    }
+}
+
+import { T_shirt } from './quesno6';const t: T_shirt={color:'blue',material:'purecotton',design:'v neck',size:'s'};const t1: T_shirt={color:'blue',material:'purecotton',design:'v neck',size:'M'};const t2: T_shirt={color:'blue',material:'purecotton',design:'v neck',size:'XL'};
+console.log("color:"+t.color+" ,material:"+t.material+" ,design:"+t.design+" ,size:"+t.size);
+console.log("color:"+t1.color+" ,material:"+t1.material+" ,design:"+t1.design+" ,size:"+t1.size);
+console.log("color:"+t2.color+" ,material:"+t2.material+" ,design:"+t2.design+" ,size:"+t2.size);
+
+
+7)Create a super class called Car.  The Car class has the following fields and methods.
+a.Number speed;
+b.number regularPrice;
+c.String color;
+d.Number getSalePrice();
+
+export class Car{
+    speed:number;
+    regularPrice:number;
+    color:String;
+
+constructor(data?:any){
+this.speed=data.speed || 100;
+this.regularPrice=data.regularPrice || 1000000;
+this.color=data.color || 'black';
+    }
+
+
+
+}
+import {Car} from './quesno7';
+const c: Car={speed:150,regularPrice:2000000,color:'white'};
+function getSalePrice(){
+
+    console.log("the regular price is: "+c.regularPrice);
+}
+getSalePrice();
+
+
+
+8)Create a subclass of Car class and name it as Truck.  The Truck class has the following fields and methods.
+a.Number weight;
+b.Number getSalePrice();  // If weight > 2000, 10% discount. Otherwise, 20% discount.
+c.Create instance of the truck and access the data.
+
+import {Car} from './quesno7';
+let saleprice:number;
+class Truck extends Car{
+    weight:number;
+constructor(data?:any){
+super(data);
+this.weight=data.weight;
+    }
+
+}
+
+const t:Truck={weight:3000,speed:150,regularPrice:3000000,color:'white'};
+function getSalePrice()
+    {
+if(t.weight>2000)
+{
+    saleprice=t.regularPrice-(t.regularPrice*0.1);
+    console.log("the 10 per discount then :"+saleprice );
+}
+else{
+    saleprice=t.regularPrice-(t.regularPrice*0.2);
+    console.log("the 20 per discount then :"+saleprice );
+}
+    }
+getSalePrice();
+
+
+
+
+
